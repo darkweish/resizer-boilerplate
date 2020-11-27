@@ -1,10 +1,10 @@
 FROM node:14
-RUN npm install -g sails
+ENV NODE_ENV=production
 
-RUN mkdir /app
-COPY . /app
-
+COPY ./ /app
 WORKDIR /app
 
 RUN npm install
-RUN npm start
+
+EXPOSE 1337
+CMD npm run start

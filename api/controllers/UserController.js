@@ -10,8 +10,9 @@ module.exports = {
   /**
    * `UserController.login()`
    */
-  login: async function (req, res) {
-    throw 'Not implemented';
+  login: async function (req, res){
+    //password.authenticate(req.user.);
+    throw 'Not pted';
   },
 
   /**

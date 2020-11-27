@@ -1,9 +1,11 @@
 version: "3"
 services:
-  sailes:
+  web:
     build: .
+    environment:
+      - NODE_ENV=development
     ports:
-      - "1337:1337"
+      - 1337:1337
+    command: npm run dev
     volumes:
       - ./:/app
-    command: "sails lift && npm install -g nodemon"
