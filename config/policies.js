@@ -9,12 +9,9 @@
  */
 
 module.exports.policies = {
+  UserController:{
+    '*':true
+  },
 
-  /***************************************************************************
-  *                                                                          *
-  * Default policy for all controllers and actions, unless overridden.       *
-  * (`true` allows public access)                                            *
-  *                                                                          *
-  ***************************************************************************/
-
+  '*': 'isLoggedIn',
 };
