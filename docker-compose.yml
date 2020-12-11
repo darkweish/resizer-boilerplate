@@ -4,8 +4,20 @@ services:
     build: .
     environment:
       - NODE_ENV=development
+      - MYSQL_DATABASE_URL= mysql://admin:admin@db:3306/resizer
     ports:
       - 1337:1337
     command: npm run dev
     volumes:
       - ./:/app
+  db:
+    image: mysql:5.7
+    volumes:
+      - db_data:/var/lib/mysql
+    environment:
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=admin
+      - MYSQL_ROOT_PASSWORD=admin
+      - MYSQL_DATABASE=resizer
+volumes:
+  db_data:
