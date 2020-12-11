@@ -48,8 +48,8 @@ module.exports.datastores = {
     *    (See https://sailsjs.com/config/datastores for help.)                 *
     *                                                                          *
     ***************************************************************************/
-    adapter: require('sails-mysql'),
-    url: 'mysql://admin:admin@db:3306/resizer',
+    adapter: 'sails-mysql',
+    url: process.env.MYSQL_DATABASE_URL,
 
   },
 
