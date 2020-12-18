@@ -3,6 +3,7 @@
     <div class="row">
       <% if (req.user) {%>
         <p> <%= req.user.username %> </p>
+        <p> Bonjour toi , <%= req.user.username %></p>
       <% } else { %>
         <p> Not logged in </p>
       <% } %>
