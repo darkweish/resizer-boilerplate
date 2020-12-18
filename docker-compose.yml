@@ -5,6 +5,7 @@ services:
     environment:
       - NODE_ENV=development
       - MYSQL_DATABASE_URL=mysql://admin:admin@db:3306/resizer
+      - REDIS_URL=redis://redis:6379
     ports:
       - 1337:1337
     command: npm run dev
@@ -19,5 +20,7 @@ services:
       - MYSQL_PASSWORD=admin
       - MYSQL_ROOT_PASSWORD=admin
       - MYSQL_DATABASE=resizer
+  redis:
+    image: redis
 volumes:
   db_data:
