@@ -22,7 +22,6 @@ module.exports.session = {
   adapter: '@sailshq/connect-redis',
   url: process.env.REDIS_URL,
 
-
   /***************************************************************************
   *                                                                          *
   * Customize when built-in session support will be skipped.                 *

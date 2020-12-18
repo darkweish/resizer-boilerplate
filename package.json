@@ -17,7 +17,8 @@
     "sails-hook-grunt": "^4.0.0",
     "sails-hook-orm": "^2.1.1",
     "sails-hook-sockets": "^2.0.0",
-    "sails-mysql": "1.0.1"
+    "sails-mysql": "1.0.1",
+    "knex": "0.21.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.6",
@@ -28,7 +29,8 @@
     "test": "npm run lint && npm run custom-tests && echo 'Done.'",
     "lint": "./node_modules/eslint/bin/eslint.js . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'",
     "custom-tests": "echo \"(No other custom tests yet.)\" && echo",
-    "dev": "nodemon --watch . sails lift"
+    "dev": "nodemon --watch . sails lift",
+    "migrate": "knex migrate:latest"
   },
   "main": "app.js",
   "repository": {
