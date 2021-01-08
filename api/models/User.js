@@ -25,6 +25,11 @@ module.exports = {
       required: true
     },
 
+    image:{
+      collection: 'image',
+      via: 'uploader'
+    }
+
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
     //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝
