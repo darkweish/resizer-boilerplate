@@ -40,7 +40,7 @@ module.exports = {
       var fileAdapter = SkipperDisk(/* optional opts */);
 
       // set the filename to the same file as the user uploaded
-      res.set("Content-disposition", "attachment; filename='" +img.path()+ "'");
+      res.set("Content-disposition", "attachment; filename='" +img.path+ "'");
 
       // Stream the file down
       fileAdapter.read(img.path)
