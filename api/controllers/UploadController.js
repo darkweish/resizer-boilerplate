@@ -30,6 +30,7 @@ module.exports = {
       })
 
     });
+    res.redirect("/upload");
   },
 
   show: async function(req, res){
