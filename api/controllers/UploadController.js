@@ -33,8 +33,21 @@ module.exports = {
   },
 
   show: async function(req, res){
+    Image.findOne(req.param('id')).exec((err, img)=>{
+      if (err) return res.serverError(err);
+      if (!img) return res.notFound();
+      var SkipperDisk = require('skipper-disk');
+      var fileAdapter = SkipperDisk(/* optional opts */);
 
+      // set the filename to the same file as the user uploaded
+      res.set("Content-disposition", "attachment; filename='" +img.path()+ "'");
+
+      // Stream the file down
+      fileAdapter.read(img.path)
+      .on('error', (err)=>{
+        return res.serverError(err);
+      })
+      .pipe(res);
+    });
   }
-
 };
-
