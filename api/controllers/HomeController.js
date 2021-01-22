@@ -7,6 +7,7 @@
 
 module.exports = {
   home: async function(req, res) {
-    res.view('home/home');
+    let user = await User.findOne(req.user.id).populate('image');
+    res.view('home/home', {user:user});
   }
 };

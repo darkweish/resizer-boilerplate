@@ -11,6 +11,7 @@
     "bcrypt": "5.x",
     "bcrypt-nodejs": "0.0.3",
     "grunt": "1.0.4",
+    "knex": "0.21.1",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "sails": "^1.4.0",
@@ -18,7 +19,7 @@
     "sails-hook-orm": "^2.1.1",
     "sails-hook-sockets": "^2.0.0",
     "sails-mysql": "1.0.1",
-    "knex": "0.21.1"
+    "skipper-s3": "^0.6.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.6",
